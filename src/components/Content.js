@@ -43,7 +43,7 @@ const Content = ({data, em, pw, inputs, err, loading}) => {
                     지난 달 연체료는 {data[i].수수료미납계좌}원으로<br/>
                     총 보험료는 <b>{data[i].수수료계좌총액}원</b>입니다.</p>
                     <p>* 아래 버튼을 클릭하여 보험료를 납부해주세요 *</p>
-                    <button onClick={() => {setLink(true)}}>돈 내세요</button>
+                    <button onClick={() => {setLink(true)}}>납부하기</button>
 
                     {
                         link === true
