@@ -1,6 +1,12 @@
+html {
+  width: 100%;
+}
+
 .App {
   text-align: center;
-  margin: 50px;
+  margin: 70px auto 0 auto;
+  font-family: 'Noto Sans KR', sans-serif;
+  width: 100%;
 }
 
 .App-logo {
@@ -46,10 +52,91 @@
 #err {
   display: none;
   color: rgb(202, 47, 47);
-  font-weight: 700;
+  font-weight: 500;
   font-size: 13px;
 }
 
 #retry {
   display: none;
+}
+
+#emoji {
+  font-size: 40px;
+}
+
+#title {
+  font-size: 13px;
+  font-weight: 500;
+  margin: 5px auto 30px auto;
+}
+
+#search {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+input {
+  display: flex;
+  margin: 3px auto;
+  height: 35px;
+  padding: 5px;
+  /* border-radius: 6px;
+  border: 1px solid rgb(110, 110, 110); */
+  border: none;
+  box-shadow: 0 0 3px grey;
+  border-radius: 5px;
+  width: 200px;
+}
+
+input::placeholder {
+  color: rgb(184, 184, 184);
+  font-size: 14px;
+}
+
+#searchBtn {
+  width: 200px;
+  height: 40px;
+  margin: 30px auto;
+  box-shadow: 0 0 3px rgb(175, 175, 175);
+  background-color: rgb(32, 32, 32);
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+#searchBtn:hover {
+  background-color: #799fda;
+}
+
+.container {
+  width: 100%;
+}
+
+.조회화면 {
+  margin-top: 80px;
+  margin-left: 0;
+  width: 100%;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 13px;
+}
+
+#납부하기 {
+  margin-top: 15px;
+  height: 40px;
+  width: 200px;
+  border-radius: 5px;
+  box-shadow: 0 0 3px rgb(175, 175, 175);
+  border: none;
+  background-color: rgb(32, 32, 32);
+  color: aliceblue;
+}
+
+#납부하기:hover {
+  background-color: #799fda;
+}
+
+#기간안내 {
+  font-size: 11.5px;
+  color: rgb(211, 66, 66);
 }

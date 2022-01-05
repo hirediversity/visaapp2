@@ -32,6 +32,8 @@ function App() {
   return (
     <div className="App">
       <div id="search">
+        <p id="emoji">🏥</p>
+        <p id='title'>* 건강보험 조회 & 납부 *</p>
         <input id="email" placeholder='e-mail'></input>
         <input id="rcNumber" placeholder='password'></input>
         <button type="button" className="btn btn-primary btn-sm" id="searchBtn" onClick={() => {
@@ -42,7 +44,9 @@ function App() {
             <span className="visually-hidden">Loading...</span>
           </div>
      
-        <p id="err">* 가입 정보가 없거나, 입력하신 정보가 틀렸습니다. *</p>
+        <p id="err">⚠<br/>
+        가입 정보가 없거나,<br/>
+        입력하신 정보가 틀렸습니다.</p>
       </div>
       <p></p>
       <div className="container">

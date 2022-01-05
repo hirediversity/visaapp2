@@ -37,15 +37,16 @@ const Content = ({data, em, pw, inputs, err, loading}) => {
                 err.style.display = 'none';
 
                 return (
-                <div>
-                    <p>{data[i].이름}님, 안녕하세요!</p>
+                <div className='조회화면'>
+                    <p>{data[i].이름}님,<br/>
+                    안녕하세요!</p>
                     <p>이번 달 보험료(This month)는 {data[i].수수료계좌}원,<br/>
-                    지난 달 연체료(Last month)는 {data[i].수수료미납계좌}원으로<br/>
+                    지난달 연체료(Last month)는 {data[i].수수료미납계좌}원으로<br/>
                     총 보험료(Total)는 <b>{data[i].수수료계좌총액}원</b>입니다.</p>
                     <p>* 아래 버튼을 클릭하여 보험료를 납부해주세요 *<br/>
-                    <b>Click the button below to pay!</b><br/>
-                    ({data[i].납부기간안내})</p>
-                    <button onClick={() => {setLink(true)}}>납부하기</button>
+                    <b id="기간안내">({data[i].납부기간안내})</b><br/>
+                    <b>Click the button below to pay!</b></p>
+                    <button id="납부하기" onClick={() => {setLink(true)}}>납부하기</button>
 
                     {
                         link === true
