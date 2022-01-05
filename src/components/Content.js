@@ -39,10 +39,12 @@ const Content = ({data, em, pw, inputs, err, loading}) => {
                 return (
                 <div>
                     <p>{data[i].이름}님, 안녕하세요!</p>
-                    <p>이번 달 보험료는 {data[i].수수료계좌}원,<br/>
-                    지난 달 연체료는 {data[i].수수료미납계좌}원으로<br/>
-                    총 보험료는 <b>{data[i].수수료계좌총액}원</b>입니다.</p>
-                    <p>* 아래 버튼을 클릭하여 보험료를 납부해주세요 *</p>
+                    <p>이번 달 보험료(This month)는 {data[i].수수료계좌}원,<br/>
+                    지난 달 연체료(Last month)는 {data[i].수수료미납계좌}원으로<br/>
+                    총 보험료(Total)는 <b>{data[i].수수료계좌총액}원</b>입니다.</p>
+                    <p>* 아래 버튼을 클릭하여 보험료를 납부해주세요 *<br/>
+                    <b>Click the button below to pay!</b><br/>
+                    ({data[i].납부기간안내})</p>
                     <button onClick={() => {setLink(true)}}>납부하기</button>
 
                     {
@@ -70,7 +72,7 @@ const Content = ({data, em, pw, inputs, err, loading}) => {
         }
 
         function Form() {
-            window.location.href = `${data[i].안내용개별링크}`
+            window.location.href = `${data[i].조폼안내용개별링크}`
         }
         
       }
