@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  margin: 50px;
 }
 
 .App-logo {
@@ -35,4 +36,20 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+#loading {
+  display: none;
+  margin: 20px auto;
+}
+
+#err {
+  display: none;
+  color: rgb(202, 47, 47);
+  font-weight: 700;
+  font-size: 13px;
+}
+
+#retry {
+  display: none;
 }
