@@ -17,7 +17,7 @@ const Content = ({data, em, pw, inputs, err, loading}) => {
             
             setOpen(true)
     
-          }, 6000);
+          }, 5000);
     } 
     else {
         alert('이메일 또는 패스워드를 입력해주세요')
@@ -56,16 +56,23 @@ const Content = ({data, em, pw, inputs, err, loading}) => {
 
                 </div>
                 )
-            } else retry()
+            } else {
+                retry();
+                break;
+            }
         }
 
         return <div></div>
             
 
         function retry() {
-            inputs.style.display = 'block';
-            loading.style.display = 'none';
-            err.style.display = 'block';
+            // inputs.style.display = 'block';
+            // loading.style.display = 'none';
+            // err.style.display = 'block';
+
+            alert('가입 정보가 없거나,\n입력하신 정보가 틀렸습니다.');
+            window.location.reload()
+            
             
             // setTimeout(() => {
             //     window.location.reload();
