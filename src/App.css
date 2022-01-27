@@ -65,7 +65,7 @@ html {
 }
 
 #title {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 700;
   margin: 5px auto 31px auto;
 }
@@ -86,7 +86,7 @@ input {
   border: none;
   box-shadow: 0 0 3px grey;
   border-radius: 5px;
-  width: 250px;
+  width: 280px;
 }
 
 input::placeholder {
@@ -95,9 +95,9 @@ input::placeholder {
 }
 
 #searchBtn {
-  width: 250px;
+  width: 280px;
   height: 45px;
-  margin: 30px auto;
+  margin: 35px auto;
   box-shadow: 0 0 3px rgb(175, 175, 175);
   background-color: rgb(32, 32, 32);
   border: none;
