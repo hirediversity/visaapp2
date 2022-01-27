@@ -4,8 +4,8 @@ html {
 
 .App {
   text-align: center;
-  margin: 70px auto 0 auto;
-  font-family: 'Noto Sans KR', sans-serif;
+  margin: 100px auto 0 auto;
+  font-family: 'IBM Plex Sans KR', sans-serif;
   width: 100%;
 }
 
@@ -65,9 +65,9 @@ html {
 }
 
 #title {
-  font-size: 13px;
-  font-weight: 500;
-  margin: 5px auto 30px auto;
+  font-size: 15px;
+  font-weight: 700;
+  margin: 5px auto 31px auto;
 }
 
 #search {
@@ -78,7 +78,7 @@ html {
 
 input {
   display: flex;
-  margin: 3px auto;
+  margin: 5px auto;
   height: 35px;
   padding: 5px;
   /* border-radius: 6px;
@@ -86,7 +86,7 @@ input {
   border: none;
   box-shadow: 0 0 3px grey;
   border-radius: 5px;
-  width: 200px;
+  width: 250px;
 }
 
 input::placeholder {
@@ -95,14 +95,14 @@ input::placeholder {
 }
 
 #searchBtn {
-  width: 200px;
-  height: 40px;
+  width: 250px;
+  height: 45px;
   margin: 30px auto;
   box-shadow: 0 0 3px rgb(175, 175, 175);
   background-color: rgb(32, 32, 32);
   border: none;
   border-radius: 5px;
-  font-size: 14px;
+  font-size: 15px;
 }
 
 #searchBtn:hover {
@@ -117,7 +117,7 @@ input::placeholder {
   margin-top: 90px;
   margin-left: 0;
   width: 100%;
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: 'IBM Plex Sans KR', sans-serif;
   font-size: 13px;
 }
 
