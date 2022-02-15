@@ -3,6 +3,11 @@ import './App.css';
 import Content from './components/Content';
 import Data from './통합데이터관리-APP용.json';
 
+<<<<<<< HEAD
+=======
+var Airtable = require('airtable');
+var base = new Airtable({apiKey: 'keyVWc7psFCmYWDcd'}).base('appmdn5kLtTSnivLC');
+>>>>>>> 2b1081830bad2eb4e93c447fc7b5a6e2f7eb3247
 
 // var Airtable = require('airtable');
 // var base = new Airtable({apiKey: 'keyVWc7psFCmYWDcd'}).base('appmdn5kLtTSnivLC');
