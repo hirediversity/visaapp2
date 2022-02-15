@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 // import Content from './components/Content';
-import Data from './통합데이터관리-APP용.json';
+import Data from './통합데이터관리-APP용 (1).json';
 
 
 // var Airtable = require('airtable');
