@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import '../App.css';
 
-const Content = ({data, em, pw, inputs, err, loading}) => {
+const Content = ({data, em, pw, inputs, loading}) => {
 
     let [link, setLink] = useState(false);
     let [open, setOpen] = useState(false);
@@ -66,15 +66,6 @@ const Content = ({data, em, pw, inputs, err, loading}) => {
         }
 
         return <div></div>
-            
-
-        function retry() {
-            // alert('가입 정보가 없거나,\n입력하신 정보가 틀렸습니다.');
-            // window.location.reload()
-            inputs.style.display = 'block';
-            loading.style.display = 'none';
-            err.style.display = 'block';
-        }
 
         function Form() {
             window.location.href = `${data[i].조폼안내용개별링크}`

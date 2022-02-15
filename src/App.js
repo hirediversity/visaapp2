@@ -40,10 +40,6 @@ function App() {
           <div id="loading" className="spinner-border spinner-border-sm" role="status">
             <span className="visually-hidden">Loading...</span>
           </div>
-
-          <p id="err">⚠<br/>
-          가입 정보가 없거나,<br/>
-          입력하신 정보가 틀렸습니다.</p>
      
       </div>
       <p></p>
@@ -56,7 +52,6 @@ function App() {
             pw={document.getElementById('rcNumber').value}
             em={document.getElementById('email').value}
             inputs={document.getElementById('search')}
-            err={document.getElementById('err')}
             loading={document.getElementById('loading')}
             />
 
@@ -68,9 +63,4 @@ function App() {
   )
 }
 
-<<<<<<< HEAD
 export default App
-=======
-  
-} export default App
->>>>>>> eb40a44bf16b2a17ec1e65454e6231d4efb2accb
