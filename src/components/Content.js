@@ -6,6 +6,7 @@ const Content = ({data, em, pw, inputs, err, loading}) => {
 
     let [link, setLink] = useState(false);
     let [open, setOpen] = useState(false);
+    const errors = [];
 
 
     if (em.length !== 0 || pw.length !== 0) {
@@ -17,7 +18,7 @@ const Content = ({data, em, pw, inputs, err, loading}) => {
             
             setOpen(true)
     
-          }, 8000);
+          }, 3000);
     } 
     else {
         alert('이메일 또는 패스워드를 입력해주세요')
@@ -30,9 +31,8 @@ const Content = ({data, em, pw, inputs, err, loading}) => {
 
         for (var i = 0; i < data.length; i++) {
 
-            if (em === data[i].이메일 && pw === data[i].AppPW) {
+            if (em == data[i].이메일 && pw == data[i].AppPW) {
                 inputs.style.display = 'none';
-                err.style.display = 'none';
 
                 return (
                 <div className='조회화면'>
@@ -55,8 +55,13 @@ const Content = ({data, em, pw, inputs, err, loading}) => {
                 </div>
                 )
             } else {
-                retry();
-                break;
+                errors.push(i)
+            }
+
+            console.log(errors)
+            if (errors.length === data.length) {
+                alert('가입 정보가 없거나,\n입력하신 정보가 틀렸습니다.');
+                window.location.reload()
             }
         }
 
@@ -64,17 +69,11 @@ const Content = ({data, em, pw, inputs, err, loading}) => {
             
 
         function retry() {
-            // inputs.style.display = 'block';
-            // loading.style.display = 'none';
-            // err.style.display = 'block';
-
-            alert('가입 정보가 없거나,\n입력하신 정보가 틀렸습니다.');
-            window.location.reload()
-            
-            
-            // setTimeout(() => {
-            //     window.location.reload();
-            // }, 500);
+            // alert('가입 정보가 없거나,\n입력하신 정보가 틀렸습니다.');
+            // window.location.reload()
+            inputs.style.display = 'block';
+            loading.style.display = 'none';
+            err.style.display = 'block';
         }
 
         function Form() {
