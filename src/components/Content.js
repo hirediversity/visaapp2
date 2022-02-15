@@ -6,7 +6,7 @@ const Content = ({data, em, pw, inputs, loading}) => {
 
     let [link, setLink] = useState(false);
     let [open, setOpen] = useState(false);
-    const errors = [];
+    let errors = [];
 
 
     if (em.length !== 0 || pw.length !== 0) {
@@ -57,12 +57,11 @@ const Content = ({data, em, pw, inputs, loading}) => {
             } else {
                 errors.push(i)
             }
+        }
 
-            console.log(errors)
-            if (errors.length === data.length) {
-                alert('가입 정보가 없거나,\n입력하신 정보가 틀렸습니다.');
-                window.location.reload()
-            }
+        if (errors.length === data.length) {
+            alert('가입 정보가 없거나,\n입력하신 정보가 틀렸습니다.');
+            window.location.reload()
         }
 
         return <div></div>
