@@ -1,13 +1,8 @@
 import React, { useState } from 'react';
 import './App.css';
-import Content from './components/Content';
+// import Content from './components/Content';
 import Data from './통합데이터관리-APP용.json';
 
-<<<<<<< HEAD
-=======
-var Airtable = require('airtable');
-var base = new Airtable({apiKey: 'keyVWc7psFCmYWDcd'}).base('appmdn5kLtTSnivLC');
->>>>>>> 2b1081830bad2eb4e93c447fc7b5a6e2f7eb3247
 
 // var Airtable = require('airtable');
 // var base = new Airtable({apiKey: 'keyVWc7psFCmYWDcd'}).base('appmdn5kLtTSnivLC');
@@ -32,10 +27,6 @@ function App() {
 
   const [db, setDb] = useState(Data);
   const [box, setBox] = useState(false);
-
-  // setTimeout(() => {
-  //   console.log(data.length);
-  // }, 8000);
 
   return (
     <div className="App">
@@ -81,16 +72,13 @@ function App() {
 
   function Box() {
 
-    
-
     const em = document.getElementById("email").value;
     const pw = document.getElementById("rcNumber").value;
 
     if (em.length === 0 || pw.length === 0) {
-      
       alert('이메일 또는 패스워드를 입력해주세요')
       window.location.reload();
-  }
+    }
 
     let [Link, setLink] = useState(false);
 
