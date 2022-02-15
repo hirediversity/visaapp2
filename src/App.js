@@ -53,17 +53,17 @@ function App() {
           {
             box === true
             ? 
-            // <Content 
-            // data={data}
-            // pw={document.getElementById('rcNumber').value}
-            // em={document.getElementById('email').value}
-            // inputs={document.getElementById('search')}
-            // err={document.getElementById('err')}
-            // loading={document.getElementById('loading')}
-            // />
+            <Content 
+            data={data}
+            pw={document.getElementById('rcNumber').value}
+            em={document.getElementById('email').value}
+            inputs={document.getElementById('search')}
+            err={document.getElementById('err')}
+            loading={document.getElementById('loading')}
+            />
 
-            alert('납부 기간이 아닙니다. (납부 기간 : 매월 20일까지)\nIt is not the payment period.\n(until the 20th of every month)\n现在不是缴纳费用的期间。\n(每月20日为截止日)')
-            : null
+            // alert('납부 기간이 아닙니다. (납부 기간 : 매월 20일까지)\nIt is not the payment period.\n(until the 20th of every month)\n现在不是缴纳费用的期间。\n(每月20日为截止日)')
+            // : null
           }
       </div>
     </div>
