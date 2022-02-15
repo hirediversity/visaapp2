@@ -3,7 +3,7 @@ import './App.css';
 import Content from './components/Content'
 
 var Airtable = require('airtable');
-var base = new Airtable({apiKey: 'keyJzEKvIACHqssJQ'}).base('appmdn5kLtTSnivLC');
+var base = new Airtable({apiKey: 'keyVWc7psFCmYWDcd'}).base('appmdn5kLtTSnivLC');
 
 const table = base('통합데이터관리');
 const data = [];
