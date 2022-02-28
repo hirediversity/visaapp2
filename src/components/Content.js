@@ -6,6 +6,7 @@ const Content = ({data, em, pw, inputs, loading, logo}) => {
 
     let [link, setLink] = useState(false);
     let [open, setOpen] = useState(false);
+    let [link2, setLink2] = useState(false);
     let errors = [];
 
 
@@ -39,9 +40,10 @@ const Content = ({data, em, pw, inputs, loading, logo}) => {
 
                 return (
                 <div className='조회화면'>
-                    <p>{data[i].전체이름}님,<br/>
+                    <p>({data[i].하다시연번})<br/>
+                    {data[i].전체이름}님,<br/>
                     안녕하세요!</p>
-                    <p>현재 외국인등록증 신청 진행 상황은<br/>
+                    <p>현재 {data[i].차수} 외국인등록증 신청 진행 상황은<br/>
                     <b>{진행상황}</b>입니다.</p>
 
                     {
@@ -59,6 +61,8 @@ const Content = ({data, em, pw, inputs, loading, logo}) => {
                         : null
                     }
 
+                    
+
                 </div>
                 )
             } else {
@@ -72,6 +76,10 @@ const Content = ({data, em, pw, inputs, loading, logo}) => {
         }
 
         return <div></div>
+
+        function Airt() {
+            window.location.href = `${data[i].app보완링크}`
+        }
 
         function Form() {
 
@@ -94,6 +102,14 @@ const Content = ({data, em, pw, inputs, loading, logo}) => {
                 <>
                     <p>보완 사유는 아래와 같습니다.</p>
                     <div id="reasonBox">{newRea}</div>
+
+                    <button id="납부하기" onClick={() => {setLink2(true)}}>보완서류 제출</button>
+
+                    {
+                        link2 === true
+                        ? <Airt />
+                        : null
+                    }
                 </>
             )
         }
