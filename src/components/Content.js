@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import '../App.css';
 
-const Content = ({data, em, pw, inputs, loading}) => {
+const Content = ({data, em, pw, inputs, loading, logo}) => {
 
     let [link, setLink] = useState(false);
     let [open, setOpen] = useState(false);
@@ -18,7 +18,7 @@ const Content = ({data, em, pw, inputs, loading}) => {
             
             setOpen(true)
     
-          }, 3000);
+          }, 4000);
     } 
     else {
         alert('이메일 또는 패스워드를 입력해주세요')
@@ -33,20 +33,27 @@ const Content = ({data, em, pw, inputs, loading}) => {
 
             if (em == data[i].이메일 && pw == data[i].AppPW) {
                 inputs.style.display = 'none';
+                logo.style.display = 'none';
+
+                let 진행상황 = data[i].진행상황.replace(/\.|\-|[(0-9)]/g,'');
 
                 return (
                 <div className='조회화면'>
-                    <p>{data[i].이름}님,<br/>
+                    <p>{data[i].전체이름}님,<br/>
                     안녕하세요!</p>
-                    <p>이번 달 보험료(This month)는 {data[i].수수료계좌}원,<br/>
-                    지난달 연체료(Last month)는 {data[i].수수료미납계좌}원으로<br/>
-                    총 보험료(Total)는 <b>{data[i].수수료계좌총액}원</b>입니다.</p>
-                    <p>* 아래 버튼을 클릭하여 보험료를 납부해주세요 *<br/>
-                    <b id="기간안내">({data[i].납부기간안내})</b><br/>
-                    <b>Click the button below to pay!</b></p>
-                    <button id="납부하기" onClick={() => {setLink(true)}}>납부하기</button>
+                    <p>현재 외국인등록증 신청 진행 상황은<br/>
+                    <b>{진행상황}</b>입니다.</p>
 
                     {
+
+                        data[i].진행상황 === '1.보완서류 요청'
+                        ? setLink(true)
+                        : null
+
+                    }
+
+                    {
+                        
                         link === true
                         ? <Form />
                         : null
@@ -60,14 +67,35 @@ const Content = ({data, em, pw, inputs, loading}) => {
         }
 
         if (errors.length === data.length) {
-            alert('가입 정보가 없거나,\n입력하신 정보가 틀렸습니다.');
+            alert('신청 정보가 없거나,\n입력하신 정보가 틀렸습니다.');
             window.location.reload()
         }
 
         return <div></div>
 
         function Form() {
-            window.location.href = `${data[i].조폼안내용개별링크}`
+
+            const rea = [data[i].증명사진보완, data[i].여권보완, data[i].사증보완, 
+                        data[i].재학보완, data[i].거주지보완, data[i].GKS보완, data[i].수원보완];
+
+            const newRea = rea.filter(item => {
+                if (item != null && item !== '보완완료') {
+                    return true;
+                } return false;
+
+            }).map((m) => {
+                let aaa = m.replace(/\"/g,'')
+                return <p id='reasons'>◼ {aaa}</p>
+            })
+
+            
+
+            return (
+                <>
+                    <p>보완 사유는 아래와 같습니다.</p>
+                    <div id="reasonBox">{newRea}</div>
+                </>
+            )
         }
         
       }
