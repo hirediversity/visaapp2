@@ -114,17 +114,21 @@ input::placeholder {
 }
 
 .조회화면 {
-  margin-top: 90px;
+  margin-top: 140px;
   margin-left: 0;
   width: 100%;
   font-family: 'IBM Plex Sans KR', sans-serif;
-  font-size: 13px;
+  font-size: 14px;
+}
+
+.조회화면 p {
+  margin-bottom: 25px;
 }
 
 #납부하기 {
   margin-top: 15px;
-  height: 40px;
-  width: 200px;
+  height: 45px;
+  width: 250px;
   border-radius: 5px;
   box-shadow: 0 0 3px rgb(175, 175, 175);
   border: none;
@@ -139,4 +143,23 @@ input::placeholder {
 #기간안내 {
   font-size: 11.5px;
   color: rgb(211, 66, 66);
+}
+
+#hirelogo {
+  display: flex;
+  width: 60px;
+  margin: 150px auto -85px auto;
+}
+
+#reasons {
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+#reasonBox {
+  border: 1px solid rgb(70, 70, 70);
+  width: 95%;
+  margin: 0px auto;
+  padding: 20px 25px 12px 25px;
+  border-radius: 15px;
 }
