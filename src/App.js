@@ -4,9 +4,9 @@ import Content from './components/Content';
 
 
 var Airtable = require('airtable');
-var base = new Airtable({apiKey: 'keyVWc7psFCmYWDcd'}).base('appmdn5kLtTSnivLC');
+var base = new Airtable({apiKey: 'keyVWc7psFCmYWDcd'}).base('appL44cwktJKhNKIP');
 
-const table = base('통합데이터관리');
+const table = base('학생 신청 및 업무 처리');
 const data = [];
 
 const getRecords = async () => {
@@ -29,8 +29,8 @@ function App() {
   return (
     <div className="App">
       <div id="search">
-        <p id="emoji">🏥</p>
-        <p id='title'>* 건강보험 조회 & 납부 *</p>
+        
+        <p id='title'>* 외국인등록증 신청 현황 조회 *</p>
         <input id="email" placeholder='e-mail'></input>
         <input id="rcNumber" placeholder='password'></input>
         <button type="button" className="btn btn-primary btn-sm" id="searchBtn" onClick={() => {
@@ -41,6 +41,7 @@ function App() {
             <span className="visually-hidden">Loading...</span>
           </div>
      
+
       </div>
       <p></p>
       <div className="container">
@@ -53,6 +54,7 @@ function App() {
             em={document.getElementById('email').value}
             inputs={document.getElementById('search')}
             loading={document.getElementById('loading')}
+            logo={document.getElementById('hirelogo')}
             />
 
             // alert('납부 기간이 아닙니다. (납부 기간 : 매월 20일까지)\nIt is not the payment period.\n(until the 20th of every month)\n现在不是缴纳费用的期间。\n(每月20日为截止日)')
