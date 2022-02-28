@@ -127,8 +127,8 @@ input::placeholder {
 
 #납부하기 {
   margin-top: 15px;
-  height: 45px;
-  width: 250px;
+  height: 50px;
+  width: 90%;
   border-radius: 5px;
   box-shadow: 0 0 3px rgb(175, 175, 175);
   border: none;
@@ -157,9 +157,9 @@ input::placeholder {
 }
 
 #reasonBox {
-  border: 1px solid rgb(70, 70, 70);
-  width: 95%;
-  margin: 0px auto;
-  padding: 20px 25px 12px 25px;
+  border: 1px solid rgb(95, 95, 95);
+  width: 89%;
+  margin: 20px auto 25px auto;
+  padding: 20px 20px 12px 20px;
   border-radius: 15px;
 }
