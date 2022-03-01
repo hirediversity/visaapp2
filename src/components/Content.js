@@ -100,7 +100,8 @@ const Content = ({data, em, pw, inputs, loading, logo}) => {
 
             return (
                 <>
-                    <p>보완 사유는 아래와 같습니다.</p>
+                    <p>보완 사유는 아래와 같습니다.<br/>
+                    <span id="기간안내">(보완 마감일: {data[i].보완마감일})</span></p>
                     <div id="reasonBox">{newRea}</div>
 
                     <button id="납부하기" onClick={() => {setLink2(true)}}>보완서류 제출</button>
