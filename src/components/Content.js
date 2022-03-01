@@ -104,7 +104,7 @@ const Content = ({data, em, pw, inputs, loading, logo}) => {
                     <span id="기간안내">(보완 마감일: {data[i].보완마감일})</span></p>
                     <div id="reasonBox">{newRea}</div>
 
-                    <button id="납부하기" onClick={() => {setLink2(true)}}>보완서류 제출</button>
+                    <button id="납부하기" onClick={() => {setLink2(true)}}>보완서류 제출 / 点击补交材料<br/>Submission of supplementary documents</button>
 
                     {
                         link2 === true
