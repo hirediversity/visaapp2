@@ -32,7 +32,7 @@ const Content = ({data, em, pw, inputs, loading, logo}) => {
 
         for (var i = 0; i < data.length; i++) {
 
-            if (em == data[i].이메일 && pw == data[i].AppPW) {
+            if (em == data[i].이메일 && pw == data[i].하다시연번) {
                 inputs.style.display = 'none';
                 logo.style.display = 'none';
 
