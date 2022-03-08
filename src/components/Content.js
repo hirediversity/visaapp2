@@ -47,7 +47,7 @@ const Content = ({data, em, pw, inputs, loading, logo}) => {
                                         .replace('반려', '材料已驳回')
                                         .replace('반려email안내 완료', '材料驳回通知邮件已发送')
                                         .replace('반려서류 준비 완료', '驳回材料提交准备完成')
-                                        .replace('지문등록 안내', '指纹登陆已通知')
+                                        .replace('지문등록 안내', '指纹登陆完成通知邮件已发送')
                                         .replace('지문등록 완료', '指纹登陆已完成')
                                         .replace('외국인등록증 수령', '外国人登陆证已领取')
                                         .replace('외국인등록증 배송시작', '外国人登陆证已开始配送')
@@ -55,6 +55,24 @@ const Content = ({data, em, pw, inputs, loading, logo}) => {
                                         .replace('외국인등록증 배포 완료', '外国人登陆证分发完毕')
                                         .replace('절차 모두 완료', '所有步骤均已完成')
                                         .replace('무효신청', '无效申请')
+                let 진행영어 = 진행상황.replace('사법처리대상', 'Subject to legal action')
+                                        .replace('심사대기', 'Waiting for Review')
+                                        .replace('검토중', 'Under Review')
+                                        .replace('보완서류 요청', 'Request for supplementary documents')
+                                        .replace('서류 준비 완료', 'Documents ready')
+                                        .replace('서류 출력 완료', 'Completed document printed')
+                                        .replace('서류 접수 완료', 'Documents submitted to the immigration')
+                                        .replace('반려', 'Rejection from the immigration')
+                                        .replace('반려email안내 완료', 'Rejected Documents Notified')
+                                        .replace('반려서류 준비 완료', 'Supplement documents ready')
+                                        .replace('지문등록 안내', 'Fingerprint registration Notified')
+                                        .replace('지문등록 완료', 'Fingerprint registration completed')
+                                        .replace('외국인등록증 수령', 'Picked-up ARC')
+                                        .replace('외국인등록증 배송시작', 'ARC Delivery Started')
+                                        .replace('외국인등록증 배송시작 email안내 완료', 'ARC Delivery Notified')
+                                        .replace('외국인등록증 배포 완료', 'Completion of ARC distribution')
+                                        .replace('절차 모두 완료', 'All Processed Complete')
+                                        .replace('무효신청', 'application for invalidation')
 
 
                 return (
@@ -63,12 +81,17 @@ const Content = ({data, em, pw, inputs, loading, logo}) => {
                     {data[i].전체이름}님,<br/>
                     안녕하세요!</p>
                     <p>현재 외국인등록증 신청 진행 상황은<br/>
-                    <b>{진행상황}</b>입니다.</p><br/>
+                    <b>{진행상황}</b>입니다.</p>
 
-                    <p>{data[i].전체이름}同学<br/>
-                    您好</p>
-                    <p>目前国人登陆证申请进行状态为<br/>
-                    <b>{진행중국어}</b></p><br/>
+                    <p>{data[i].전체이름}同学,<br/>
+                    目前国人登陆证申请进行状态为<br/>
+                    <b>{진행중국어}</b></p>
+
+                    <p>Hello, {data[i].전체이름}!<br/>
+                    Your current status for the ARC application is:<br/>
+                    <b>{진행영어}</b></p>
+
+                    
 
                     {
 
@@ -124,8 +147,10 @@ const Content = ({data, em, pw, inputs, loading, logo}) => {
 
             return (
                 <>
+                    <p>ㅡ</p>
                     <p>보완 사유는 아래와 같습니다 / 需要补交的材料如下<br/>
-                    <span id="기간안내">(보완 마감일 / 材料补交截止日期 : {data[i].보완마감일})</span></p>
+                    The reasons for supplementation are as follows.<br/>
+                    <span id="기간안내">(보완 마감일 / 材料补交截止日期 / Supplement deadline : {data[i].보완마감일})</span></p>
 
                     <div id="reasonBox">{newRea}</div>
 
