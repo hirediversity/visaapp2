@@ -19,7 +19,7 @@ const Content = ({data, em, pw, inputs, loading, logo}) => {
             
             setOpen(true)
     
-          }, 4000);
+          }, 8000);
     } 
     else {
         alert('이메일 또는 패스워드를 입력해주세요')
