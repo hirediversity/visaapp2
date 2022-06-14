@@ -6,7 +6,7 @@ import Content from './components/Content';
 var Airtable = require('airtable');
 var base = new Airtable({apiKey: 'keyVWc7psFCmYWDcd'}).base('appL44cwktJKhNKIP');
 
-const table = base('학생 신청 및 업무 처리');
+const table = base('신규 업무 처리');
 const data = [];
 
 const getRecords = async () => {
