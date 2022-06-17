@@ -164,3 +164,9 @@ input::placeholder {
   padding: 20px 20px 12px 20px;
   border-radius: 15px;
 }
+
+#loginform {
+  margin-top: 15px;
+  font-size: 13px;
+
+}
