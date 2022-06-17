@@ -118,7 +118,7 @@ const Content = ({data, em, pw, inputs, loading, logo}) => {
         }
 
         if (errors.length === data.length) {
-            alert('신청 정보가 없거나,\n입력하신 정보가 틀렸습니다.');
+            alert('Please try again\n(do not refresh the page)');
             window.location.reload()
         }
 
