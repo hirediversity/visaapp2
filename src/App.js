@@ -36,6 +36,11 @@ function App() {
         <button type="button" className="btn btn-primary btn-sm" id="searchBtn" onClick={() => {
           setBox(true);
           }}>Login</button>
+
+          <p id='loginform'>로그인이 안 되는 경우 페이지 새로고침을 하지 않고 5분 뒤에 다시 시도해 주세요<br/>
+          If you can't log in please try again 5 minutes later, do not refresh the page.<br/>
+          如果无法进行登录，请将本页面维持5分钟之后再次输入账号密码进行尝试。谢谢
+          </p>
        
           <div id="loading" className="spinner-border spinner-border-sm" role="status">
             <span className="visually-hidden">Loading...</span>
