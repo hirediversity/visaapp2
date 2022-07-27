@@ -1,5 +1,6 @@
 html {
   width: 100%;
+  margin-bottom: 100px;
 }
 
 .App {
@@ -127,7 +128,20 @@ input::placeholder {
 
 #납부하기 {
   margin-top: 15px;
-  margin-bottom: 130px;
+  margin-bottom: 20px;
+  height: 60px;
+  width: 90%;
+  border-radius: 5px;
+  box-shadow: 0 0 3px rgb(175, 175, 175);
+  border: none;
+  background-color: rgb(32, 32, 32);
+  color: aliceblue;
+}
+
+#결제 {
+  /* display: none; */
+  margin-top: 15px;
+  margin-bottom: 15px;
   height: 60px;
   width: 90%;
   border-radius: 5px;
@@ -141,6 +155,10 @@ input::placeholder {
   background-color: #799fda;
 }
 
+#결제:hover {
+  background-color: #799fda;
+}
+
 #기간안내 {
   font-size: 11.5px;
   color: rgb(211, 66, 66);
@@ -149,8 +167,32 @@ input::placeholder {
 #hirelogo {
   display: flex;
   width: 60px;
-  margin: 150px auto -85px auto;
+  margin: 100px auto -85px auto;
 }
+
+#lan {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  margin: 50px auto;
+  padding-right: 20%;
+}
+
+#ko {
+  width: 30px;
+  margin: 3px;
+}
+
+#us {
+  width: 30px;
+  margin: 3px;
+}
+
+#cn {
+  width: 30px;
+  margin: 3px;
+}
+
 
 #reasons {
   margin-bottom: 10px;
@@ -161,12 +203,17 @@ input::placeholder {
   border: 1px solid rgb(95, 95, 95);
   width: 89%;
   margin: 35px auto 25px auto;
-  padding: 20px 20px 12px 20px;
+  padding: 20px 20px 20px 20px;
   border-radius: 15px;
+  text-align: left;
 }
 
 #loginform {
   margin-top: 15px;
   font-size: 13px;
 
+}
+
+#결제 {
+  margin-top: 15px;
 }
