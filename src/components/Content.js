@@ -36,7 +36,7 @@ const Content = ({data, em, pw, inputs, loading, logo}) => {
                 inputs.style.display = 'none';
                 logo.style.display = 'none';
 
-                let 진행상황 = data[i].진행상황.replace(/\.|\-|[(0-9)]/g,'');
+                let 진행상황 = data[i].진행상황.toString().replace(/\.|\-|[(0-9)]/g,'');
                 let 진행중국어 = 진행상황.replace('사법처리대상', '罚款处理对象')
                                         .replace('심사대기', '材料审核待机')
                                         .replace('검토중', '材料审核中')
