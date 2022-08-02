@@ -183,7 +183,7 @@ const CNContent = ({data, em, pw, inputs, loading, logo}) => {
                     }
 
                     {
-                        data[i].일회대면여부 === true
+                        data[i].일회방문여부 === true
                         ? <div><br/><p>出入境事务所访问日程如下<br/>
                         管辖出入境 : {data[i].담당기관}<br/>
                         访问日期 : {data[i].방문일시}<br/>
