@@ -50,6 +50,16 @@ html {
   margin: 20px auto;
 }
 
+#loading1 {
+  display: none;
+  margin: 20px auto;
+}
+
+#loading2 {
+  display: none;
+  margin: 20px auto;
+}
+
 #err {
   display: none;
   color: rgb(202, 47, 47);
@@ -72,6 +82,18 @@ html {
 }
 
 #search {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+#search1 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+#search2 {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -167,7 +189,7 @@ input::placeholder {
 #hirelogo {
   display: flex;
   width: 60px;
-  margin: 100px auto -85px auto;
+  margin: 70px auto -85px auto;
 }
 
 #lan {
