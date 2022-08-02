@@ -177,7 +177,7 @@ const Content = ({data, em, pw, inputs, loading, logo}) => {
                     }
 
                     {
-                        data[i].일회대면여부 === true
+                        data[i].일회방문여부 === true
                         ? <div><br/><p>The immigration office and visit date are as follows.<br/>
                         The competent immigration office : {data[i].담당기관}<br/>
                         Date and time of visit : {data[i].방문일시}<br/>
