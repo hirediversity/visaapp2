@@ -174,7 +174,7 @@ const KOContent = ({data, em, pw, inputs, loading, logo}) => {
                     }
 
                     {
-                        data[i].일회대면여부 === true
+                        data[i].일회방문여부 === true
                         ? <div><br/><p>관할 출입국사무소와 방문일자는 다음과 같습니다.<br/>
                         관할 출입국사무소 : {data[i].담당기관}<br/>
                         방문일시 : {data[i].방문일시}<br/>
